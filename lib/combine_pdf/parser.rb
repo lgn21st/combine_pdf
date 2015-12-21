@@ -172,6 +172,10 @@ module CombinePDF
 				# end unless (last == out.count) || (-1 == (last = out.count))
 				case
 				##########################################
+				## parse comment and do nothing
+				##########################################
+				when @scanner.scan(/%.*[\r\n]/)
+				##########################################
 				## parse an Array
 				##########################################
 				when @scanner.scan(/\[/)
